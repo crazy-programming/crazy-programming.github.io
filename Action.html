@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation in JS</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+  <script src="/jQuery.js"></script>
+  <style>
+    #prosess{
+        width: 530px;
+        height: 50px;
+        background-color:rgb(57, 94, 10);
+        padding: 10px;
+        
+    }
+    #bar{
+       background-color: rgb(115, 218, 20);
+       height: 20px;
+       width: 5px;
+       max-width: 500px;
+       padding: 15px;
+    }
+   
+  </style>
+  
+</head>
+<body> 
+    <div id="prosess">
+    <div id="bar">
+        
+        
+
+    </div>
+    </div>
+    <button>click Me!</button>
+    <script>
+       // let ss=$("bar").width();
+      //  console.log(ss);
+      //  $(document).ready(function()
+       // { 
+       //     $("button").click(function(){
+         //       $("#bar").css(name);
+           // $("#bar").animate({width: 500},10000);   
+          //  alert("complete");
+            //$("#prosess").draggable();
+            //console.log($("bar").width());
+           // });
+             //           console.log(ss);
+           // if(s==490){
+          //      console.log(ss);
+          //  }
+       // });
+       let name={
+           color:"blue",
+           background:"black"
+       }
+       $("#bar").css(name);
+        $(document).ready(function(){
+        $("#bar").each(function(){
+          var percentage = parseInt($(this).html());
+          if(percentage > 0){
+            $(this).animate({'width':''+percentage+'px'}, 800);
+          }
+          //else{
+           // $(this).css({'color':'black', 'background':'none'}, 800);
+         // } 
+        })
+      })
+
+        
+      
+   
+    </script>
+
+</body>
+
+</html>
